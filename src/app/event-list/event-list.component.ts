@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GetTicketmasterDataService } from '../get-ticketmaster-data.service';
 
 @Component({
   selector: 'app-event-list',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private ticketMasterData : GetTicketmasterDataService) { 
+  }
+
 
   ngOnInit() {
   }
