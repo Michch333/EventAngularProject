@@ -11,14 +11,8 @@ export class EventListComponent implements OnInit {
   constructor(private ticketMasterData : GetTicketmasterDataService) { 
   }
 
-  getTicketMasterData(){
-    this.ticketMasterData.getData().subscribe((e: any) =>{
-      console.log(e);
-    })
-  }
 
   ngOnInit() {
-    this.getTicketMasterData();
   }
 
 }

@@ -11,6 +11,6 @@ export class GetTicketmasterDataService {
 
 
    getData() {
-     return this.httpRequest.get('https://app.ticketmaster.com/discovery/v1/events.json?apikey=ZX5svVHj0qJ8AVTz2KqWdiChU2zmAAU6');
+     return this.httpRequest.get('https://app.ticketmaster.com/discovery/v2/events/vvG1OZ4mip4JKI.json?apikey=ZX5svVHj0qJ8AVTz2KqWdiChU2zmAAU6');
    }
 }
