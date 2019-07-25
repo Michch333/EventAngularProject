@@ -1,0 +1,7 @@
+#app-container {
+    background-image: url("https://assets.bigcartel.com/product_images/189369092/Stadiums_0467.jpg");
+    height: 40em;
+    background-size: cover;
+    width: auto;
+    background-position: 50% 50%;
+}
