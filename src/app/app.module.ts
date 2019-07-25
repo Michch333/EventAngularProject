@@ -7,12 +7,14 @@ import { SearchCriteriaComponent } from './search-criteria/search-criteria.compo
 import { EventListComponent } from './event-list/event-list.component';
 import { BucketlistPageComponent } from './bucketlist-page/bucketlist-page.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     SearchCriteriaComponent,
     EventListComponent,
     BucketlistPageComponent
+   
   ],
   imports: [
     BrowserModule,
