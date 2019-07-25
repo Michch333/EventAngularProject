@@ -1,11 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchCriteriaComponent } from './search-criteria/search-criteria.component';
 import { EventListComponent } from './event-list/event-list.component';
 import { BucketlistPageComponent } from './bucketlist-page/bucketlist-page.component';
+import { GetTicketmasterDataService } from './get-ticketmaster-data.service';
 
 @NgModule({
   declarations: [
@@ -16,9 +19,13 @@ import { BucketlistPageComponent } from './bucketlist-page/bucketlist-page.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    GetTicketmasterDataService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
