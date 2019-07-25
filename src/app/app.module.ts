@@ -34,13 +34,11 @@ const appRoutes: Routes = [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(appRoutes),
   ],
   providers: [
-    GetTicketmasterDataService
-    RouterModule.forRoot(
-      appRoutes
-    )
+    GetTicketmasterDataService,
   ],
   bootstrap: [AppComponent]
 })
