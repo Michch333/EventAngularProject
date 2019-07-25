@@ -1,13 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { GetTicketmasterDataService } from '../get-ticketmaster-data.service';
+import { BuildEventService } from '../build-event.service';
 
 interface Event {
   name: string,
   venue: string,
+  venueAddress: string,
   date: string,
-  // ticketPrice: number, Doesnt look like we can get this right now :( 
+  description: string,
+  // ticketPrice: number, Doesnt look like we can get this right now :(  
   link: string
-}
+};
+
 
 @Component({
   selector: 'app-search-criteria',
@@ -16,18 +20,16 @@ interface Event {
 })
 export class SearchCriteriaComponent implements OnInit {
 
+  eventArray : Object[] = [];
+  eventObject: Event;
+
   typeOfEvent : string;
 
-  constructor(private ticketMasterData : GetTicketmasterDataService) { }
+  constructor(private ticketMasterData : GetTicketmasterDataService, private buildEvent : BuildEventService) { }
 
-  getTicketMasterData() {
-    this.ticketMasterData.getData().subscribe((e: any) =>{
-      console.log(e);
-    })
-  }
 
   ngOnInit() {
-    this.getTicketMasterData();
+    this.eventArray = (this.buildEvent.buildObject());
   }
 
 }
