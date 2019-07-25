@@ -1,22 +1,35 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchCriteriaComponent } from './search-criteria/search-criteria.component';
 import { EventListComponent } from './event-list/event-list.component';
 import { BucketlistPageComponent } from './bucketlist-page/bucketlist-page.component';
 
+const appRoutes: Routes = [
+  { path: 'search-criteria', component: SearchCriteriaComponent },
+  { path: 'bucketlist-page', component: BucketlistPageComponent },
+  { path: 'event-list', component: EventListComponent},
+  { path: '',
+    redirectTo: '/search-criteria',
+    pathMatch: 'full'
+  }
+];
+
 @NgModule({
   declarations: [
     AppComponent,
     SearchCriteriaComponent,
     EventListComponent,
-    BucketlistPageComponent
+    BucketlistPageComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(
+      appRoutes
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]
