@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GetTicketmasterDataService } from '../get-ticketmaster-data.service';
+import { BuildEventService } from '../build-event.service';
 
 @Component({
   selector: 'app-event-list',
@@ -8,11 +9,14 @@ import { GetTicketmasterDataService } from '../get-ticketmaster-data.service';
 })
 export class EventListComponent implements OnInit {
 
-  constructor(private ticketMasterData : GetTicketmasterDataService) { 
+  eventArray : Object[] = [];
+
+  constructor(private ticketMasterData : GetTicketmasterDataService, private buildEvent: BuildEventService) { 
   }
 
 
   ngOnInit() {
+    this.eventArray = (this.buildEvent.buildObject())
   }
 
 }
