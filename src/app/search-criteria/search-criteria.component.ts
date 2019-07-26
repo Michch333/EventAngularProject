@@ -29,7 +29,7 @@ export class SearchCriteriaComponent implements OnInit {
 
 
   ngOnInit() {
-    this.eventArray = (this.buildEvent.buildObject());
+    console.log(this.buildEvent.buildObject("tigers", "detroit"));
   }
 
 }
