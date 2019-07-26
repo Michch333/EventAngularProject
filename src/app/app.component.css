@@ -1,7 +1,49 @@
+* {
+    margin: -10px;
+    scroll-margin-bottom: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
 #app-container {
     background-image: url("https://assets.bigcartel.com/product_images/189369092/Stadiums_0467.jpg");
-    height: 40em;
+    height: 60em;
+    border: none;
     background-size: cover;
+    background-attachment: fixed;
     width: auto;
     background-position: 50% 50%;
+    text-align: center;
+}
+
+#nav {
+    color: white;
+    list-style-type: none;
+    margin: 5px;
+    height: 10px;
+    margin-bottom: 10px;
+}
+
+#logo {
+    color: white;
+    font-size: 50px;
+    margin: 5px;
+    padding: 5px;
+    font-style: italic;
+}
+
+li {
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 15px;
+    display: inline-block;
+}
+
+a {
+    color: white;
+    text-decoration: none;
 }
