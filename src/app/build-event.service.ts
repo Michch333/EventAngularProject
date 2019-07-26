@@ -9,12 +9,15 @@ export class BuildEventService {
 
   eventObject = {};
   eventArray : Object[] = [];
+  keyword : string;
+  startDate : string;
+  city : string;
 
   constructor(private getTicketMasterData : GetTicketmasterDataService) { }
 
-  buildObject(){
+  buildObject(keyword, city){
     this.eventObject = {};
-    this.getTicketMasterData.getData().subscribe((e: any) =>{
+    this.getTicketMasterData.getData(keyword, city).subscribe((e: any) =>{
       for (let i = 0; i < 10; i ++){
         let eventObject = {
           name: e._embedded.events[i].name,

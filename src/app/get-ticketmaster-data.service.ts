@@ -9,8 +9,10 @@ export class GetTicketmasterDataService {
   constructor(private httpRequest : HttpClient) {
    }
 
-
-   getData() {
-     return this.httpRequest.get('https://app.ticketmaster.com/discovery/v2/events.json?apikey=ZX5svVHj0qJ8AVTz2KqWdiChU2zmAAU6');
-   }
+  getData(keyword, city) {
+    keyword = `&keyword=${keyword}`;
+    city = `&city=[${city}]`;
+    // startDate = `&onsaleOnAfterStartDate=${startDate}`;
+     return this.httpRequest.get(`https://app.ticketmaster.com/discovery/v2/events.json?${keyword}${city}&apikey=ZX5svVHj0qJ8AVTz2KqWdiChU2zmAAU6`);
+  }
 }
