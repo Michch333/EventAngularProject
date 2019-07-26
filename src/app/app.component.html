@@ -1,6 +1,12 @@
 <div id="app-container">
-    <div id="app-logo">
-        Event Angular App</div>
+    <div class="header">
+        <p id="logo">Ticketcircus</p>
+        <ul id="nav">
+            <li><a routerLink="/search-criteria" routerLinkActive="active">search criteria</a></li>
+            <li><a routerLink="/bucketlist-page" routerLinkActive="active">bucket list</a></li>
+
+        </ul>
+    </div>
     <div id="search-criteria-container">
         <!-- <app-search-criteria></app-search-criteria> -->
     </div>
@@ -8,11 +14,7 @@
 
     </div>
 
-    <ul>
-        <li><a routerLink="/search-criteria" routerLinkActive="active">Search Criteria</a></li>
-        <li><a routerLink="/bucketlist-page" routerLinkActive="active">Bucket list</a></li>
 
-    </ul>
     <router-outlet></router-outlet>
 
 </div>
