@@ -1,10 +1,10 @@
 
 <div id="bkt-list-container">
-        <span class="bkt-list-tile"></span>
-        <span class="bkt-list-tile"></span>
-        <span class="bkt-list-tile"></span>
-        <span class="bkt-list-tile"></span>
-        <span class="bkt-list-tile"></span>
-        <span class="bkt-list-tile"></span>
+    <div class="bkt-list-tile" *ngFor="let event of eventArray">
+        <p class="bkt-primary">{{event.name}}</p>
+        <p class="bkt-secondary">{{event.venue}}</p>
+        <p class="bkt-secondary">{{event.date}}</p>
+        <p class="bkt-description">{{event.description}}</p>
     </div>
+</div>
 
