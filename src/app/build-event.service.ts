@@ -10,7 +10,8 @@ interface Event {
   description: string,
   link: string,
   img : string,
-  isInBucket : boolean
+  isInBucket : boolean,
+  eventID: string,
 };
 
 @Injectable({
@@ -45,7 +46,8 @@ export class BuildEventService {
               description: "",
               link : "",
               img : "",
-              isInBucket : false
+              isInBucket : false,
+              eventID : "",
             } ;
 
             returnedEvent.name = event.name;
@@ -55,7 +57,8 @@ export class BuildEventService {
             returnedEvent.description = event.info;
             returnedEvent.link = event.url;
             returnedEvent.img = event.images[0].url;
-        
+            returnedEvent.eventID = event.id;
+            
             this.eventArray.push(returnedEvent);
           }
       });
