@@ -16,6 +16,8 @@ export class EventListComponent implements OnInit {
 
 
   ngOnInit() {
+
+    this.eventArray = this.buildEvent.getResults();
   }
 
 }

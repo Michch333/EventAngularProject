@@ -2,37 +2,78 @@ import { Injectable } from '@angular/core';
 import { GetTicketmasterDataService } from './get-ticketmaster-data.service';
 import { BucketlistPageComponent } from './bucketlist-page/bucketlist-page.component';
 
+interface Event {
+  name: string,
+  venue: string,
+  venueAddress: string,
+  date: string,
+  description: string,
+  link: string,
+  img : string,
+  isInBucket : boolean
+};
+
 @Injectable({
   providedIn: 'root'
 })
 export class BuildEventService {
 
-  eventObject = {};
+
   eventArray : Object[] = [];
   keyword : string;
   startDate : string;
   city : string;
+  
+  eventObjects : any;
+  suggestObjects : any;
 
   constructor(private getTicketMasterData : GetTicketmasterDataService) { }
 
-  buildObject(keyword, city){
-    this.eventObject = {};
-    this.getTicketMasterData.getData(keyword, city).subscribe((e: any) =>{
-      for (let i = 0; i < 10; i ++){
-        let eventObject = {
-          name: e._embedded.events[i].name,
-          venue: e._embedded.events[i]._embedded.venues[0].name,
-          venueAddress: e._embedded.events[i]._embedded.venues[0].address.line1,
-          date: e._embedded.events[i].dates.start.localDate,
-          description: e._embedded.events[i].info,
-          link: e._embedded.events[i].url,
-          isInBucket : false
-        }
-        this.eventArray.push(eventObject);
-      }
-    });
+  buildObject(city,startDate, keyword){
+      this.getTicketMasterData.getData(city,startDate,keyword).subscribe((e:any) =>{
+        this.eventObjects = e._embedded.events;
+
+        // console.log(this.eventObjects);
+
+          for (let event of this.eventObjects) {
+            
+            let returnedEvent : Event = {
+              name: "",
+              venue: "",
+              venueAddress: "",
+              date: "",
+              description: "",
+              link : "",
+              img : "",
+              isInBucket : false
+            } ;
+
+            returnedEvent.name = event.name;
+            returnedEvent.venue = event._embedded.venues[0].name;
+            returnedEvent.venueAddress = event._embedded.venues[0].address.line1;
+            returnedEvent.date = event.dates.start.localDate;
+            returnedEvent.description = event.info;
+            returnedEvent.link = event.url;
+            returnedEvent.img = event.images[0].url;
+        
+            this.eventArray.push(returnedEvent);
+          }
+      });
+       //console.log(this.eventArray);
+      return this.eventArray;
+  }
+
+  // buildSuggestion(keyword : string){
+  //   this.getTicketMasterData.getSuggestions(keyword).subscribe((e:any) => {
+  //     this.suggestObjects = e._embedded.events;
+
+  //     console.log(this.suggestObjects);
+
+  //   })
+  // }
+
+  getResults(){
     return this.eventArray;
-    
   }
 
   // this is a temp method. Just being used to work on the BucketlistPageComponent
