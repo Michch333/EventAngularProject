@@ -1,0 +1,14 @@
+.event{
+    background-color: rgb(240, 236, 236);
+    border-bottom: 2px solid rgb(147, 170, 194);
+    display: flex;
+    padding: 2px;
+}
+
+.img-box{
+    margin-right: 10px;
+}
+
+.event-description{
+    flex: 1;
+}

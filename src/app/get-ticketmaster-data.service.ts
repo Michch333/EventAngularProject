@@ -9,10 +9,15 @@ export class GetTicketmasterDataService {
   constructor(private httpRequest : HttpClient) {
    }
 
-  getData(keyword, city) {
+  getData(city: string, startDate : string, keyword : string) {
     keyword = `&keyword=${keyword}`;
     city = `&city=[${city}]`;
-    // startDate = `&onsaleOnAfterStartDate=${startDate}`;
-     return this.httpRequest.get(`https://app.ticketmaster.com/discovery/v2/events.json?${keyword}${city}&apikey=ZX5svVHj0qJ8AVTz2KqWdiChU2zmAAU6`);
+    startDate = `&StartDateTime=${startDate}T11:32:00Z`;
+    
+     return this.httpRequest.get(`https://app.ticketmaster.com/discovery/v2/events.json?&marketId=7${keyword}${city}${startDate}&apikey=ZX5svVHj0qJ8AVTz2KqWdiChU2zmAAU6`);
   }
+
+  // getSuggestions(keyword : string){
+  //    return this.httpRequest.get(`https://app.ticketmaster.com/discovery/v2/suggest.json?apikey=ZX5svVHj0qJ8AVTz2KqWdiChU2zmAAU6&keyword=${keyword}&geoPoint=dps&radius=10&unit=miles&locale=en`);
+  // }
 }

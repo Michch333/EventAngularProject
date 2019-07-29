@@ -1,11 +1,12 @@
 <div id="search-container-body">
 
     <div id="search-container">
-        <input type="text" placeholder="find a live experience" class="inputs">
-        <input type="text" placeholder="where" class="inputs">
-        <input type="date" class="inputs">
-        <i class="material-icons" style="color:white; cursor: default;">search</i>
+        <input #keyword type="text" placeholder="find a live experience" class="inputs">
+        <input #city type="text" placeholder="where" class="inputs">
+        <input #date type="date" class="inputs">
+        <i (click)="requestEvents(city.value,date.value,keyword.value)" routerLink="/event-list" class="material-icons" style="color:white">search</i>
     </div>
-
+    
+       
 
 </div>

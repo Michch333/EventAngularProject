@@ -2,19 +2,17 @@
     <div class="header">
         <p id="logo">Ticketcircus</p>
         <ul id="nav">
-            <li><a routerLink="/search-criteria" routerLinkActive="active">search criteria</a></li>
+            <!-- <li><a routerLink="/search-criteria" routerLinkActive="active">search criteria</a></li> -->
             <li><a routerLink="/bucketlist-page" routerLinkActive="active">bucket list</a></li>
 
         </ul>
     </div>
     <div id="search-criteria-container">
-        <!-- <app-search-criteria></app-search-criteria> -->
+        <app-search-criteria></app-search-criteria>
     </div>
     <div id="router-container">
-
+        <router-outlet></router-outlet>
     </div>
 
-
-    <router-outlet></router-outlet>
 
 </div>
