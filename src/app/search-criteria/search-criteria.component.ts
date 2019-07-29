@@ -25,11 +25,24 @@ export class SearchCriteriaComponent implements OnInit {
 
   typeOfEvent : string;
 
+  
+
   constructor(private ticketMasterData : GetTicketmasterDataService, private buildEvent : BuildEventService) { }
 
 
   ngOnInit() {
-    console.log(this.buildEvent.buildObject("tigers", "detroit"));
+
+      //console.log(this.buildEvent.buildObject("detroit","2019-07-30","little caesars"));
+      // console.log(this.buildEvent.buildSuggestion("football"));
+    }
+
+    requestEvents(city : string, startDate : string, keyword : string){
+       this.buildEvent.buildObject(city,startDate,keyword);
+    }
+    
+    
   }
 
-}
+
+
+

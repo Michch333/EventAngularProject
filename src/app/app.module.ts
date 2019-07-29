@@ -17,7 +17,7 @@ const appRoutes: Routes = [
   { path: 'bucketlist-page', component: BucketlistPageComponent },
   { path: 'event-list', component: EventListComponent},
   { path: '',
-    redirectTo: '/search-criteria',
+    redirectTo: '/',
     pathMatch: 'full'
   }
 ];
