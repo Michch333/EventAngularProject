@@ -11,6 +11,8 @@ import { SearchCriteriaComponent } from './search-criteria/search-criteria.compo
 import { EventListComponent } from './event-list/event-list.component';
 import { BucketlistPageComponent } from './bucketlist-page/bucketlist-page.component';
 import { GetTicketmasterDataService } from './get-ticketmaster-data.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 const appRoutes: Routes = [
   { path: 'search-criteria', component: SearchCriteriaComponent },
@@ -32,6 +34,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule, 
     AppRoutingModule,
     HttpClientModule,
     FormsModule,

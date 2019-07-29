@@ -47,3 +47,26 @@ a {
     color: white;
     text-decoration: none;
 }
+
+.side-btn {
+    position: fixed;
+    right: -45px;
+    top: 50%;
+    width: 110px;
+    height: 25px;
+    color:white;
+    background-color:#b48c36;
+    font-family: TMSans-Bold, Helvetica, Arial, sans-serif;
+    font-size: 0.6875em;
+    line-height: 16px;
+    transform: rotate(-90deg) translateY(-50%);
+    z-index: 11;
+    cursor: pointer;
+    border-radius: 4px 4px 0px 0px;
+    /*border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    outline: none;
+    transition: all 0.3s ease 0s; */
+}
