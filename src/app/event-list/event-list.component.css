@@ -1,12 +1,31 @@
 #event-container {
-    background-color: rgb(240, 236, 236);
+    background-color: rgb(255, 255, 255);
     border-bottom: 2px solid rgb(147, 170, 194);
+    border-right: 2px solid rgb(147, 170, 194);
     display: flex;
     padding: 2px;
     justify-content: space-between;
     margin-left: 50px;
     margin-right: 50px;
     align-items: center;
+    margin-bottom: 10px;
+    border-radius: 3px;
+}
+
+#event-container:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: #D3D3D3;
+}
+
+#event-title {
+    font-size: 1.5em;
+    margin: .75em 0;
+    text-decoration: none;
+    color: #000000;
+}
+
+#event-title:hover {
+    color: #006CDE;
 }
 
 .img-box {
@@ -15,9 +34,15 @@
     margin-left: 15px;
 }
 
+#description {
+    margin-left: 65px;
+    margin-right: 65px;
+    word-wrap: break-word;
+}
+
 #img {
-    height: 200px;
-    width: 200px;
+    height: 225px;
+    width: 225px;
     object-fit: contain;
     margin-left: 15px;
 }
@@ -29,8 +54,22 @@
 .material-icons {
     cursor: default;
     font-size: 35px;
+    margin-bottom: 25px;
 }
 
 .bucket-icon {
     margin-right: 50px;
+    color: #006CDE;
+}
+
+#eventLink {
+    background-color: #006CDE;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+#eventLink:hover {
+    background-color: #00366f;
 }

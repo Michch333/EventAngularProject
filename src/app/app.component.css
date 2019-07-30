@@ -8,13 +8,18 @@
 
 #app-container {
     background-image: url("https://assets.bigcartel.com/product_images/189369092/Stadiums_0467.jpg");
-    height: 60em;
+    height: 10000px;
     border: none;
     background-size: cover;
     background-attachment: fixed;
+    background-repeat: repeat-y;
     width: auto;
     background-position: 50% 50%;
     text-align: center;
+}
+
+#app-container:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 #nav {
@@ -54,8 +59,8 @@ a {
     top: 50%;
     width: 110px;
     height: 25px;
-    color:white;
-    background-color:#b48c36;
+    color: white;
+    background-color: #b48c36;
     font-family: TMSans-Bold, Helvetica, Arial, sans-serif;
     font-size: 0.6875em;
     line-height: 16px;
