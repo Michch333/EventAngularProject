@@ -9,12 +9,36 @@ export class GetTicketmasterDataService {
   constructor(private httpRequest : HttpClient) {
    }
 
+  apiCallUrl = '';
+
   getData(city: string, startDate : string, keyword : string) {
-    keyword = `&keyword=${keyword}`;
-    city = `&city=[${city}]`;
-    startDate = `&StartDateTime=${startDate}T11:32:00Z`;
+    if (keyword.length > 0) {
+      keyword = `&keyword=${keyword}`;
+    }
+    else {
+      keyword = '';
+    }
+
+    if (city.length > 0) {
+      city = `&city=[${city}]`;
+    }
+    else {
+      city = '';
+    }
+
+    if (startDate.length > 0) {
+      startDate = `&StartDateTime=${startDate}T11:32:00Z`;
+    }
+    else {
+      startDate = '';
+    }
+
+    this.apiCallUrl = `https://app.ticketmaster.com/discovery/v2/events.json?${keyword}${city}${startDate}&apikey=ZX5svVHj0qJ8AVTz2KqWdiChU2zmAAU6`;
     
-     return this.httpRequest.get(`https://app.ticketmaster.com/discovery/v2/events.json?&marketId=7${keyword}${city}${startDate}&apikey=ZX5svVHj0qJ8AVTz2KqWdiChU2zmAAU6`);
+    console.log(this.apiCallUrl);
+
+    
+     return this.httpRequest.get(this.apiCallUrl);
   }
 
   // getSuggestions(keyword : string){

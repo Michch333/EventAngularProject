@@ -10,6 +10,7 @@ import { BuildEventService } from '../build-event.service';
 export class EventListComponent implements OnInit {
 
   eventArray : Object[] = [];
+  bucketListArray: Object[] = [];
 
   constructor(private ticketMasterData : GetTicketmasterDataService, private buildEvent: BuildEventService) { 
   }
@@ -18,6 +19,12 @@ export class EventListComponent implements OnInit {
   ngOnInit() {
 
     this.eventArray = this.buildEvent.getResults();
+  }
+
+  addToBucketList(event){
+
+    this.buildEvent.addToBucket(event);
+
   }
 
 }

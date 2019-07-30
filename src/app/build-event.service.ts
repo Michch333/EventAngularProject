@@ -22,6 +22,7 @@ export class BuildEventService {
 
 
   eventArray : Object[] = [];
+  bucketListArray : Object[] = [];
   keyword : string;
   startDate : string;
   city : string;
@@ -81,28 +82,19 @@ export class BuildEventService {
     return this.eventArray;
   }
 
+  addToBucket(event) {
+    console.log(event);
+    event.isInBucket = true;
+    this.bucketListArray.push(event);
+    console.log(this.bucketListArray);
+    return this.bucketListArray;
+
+  }
+
   // this is a temp method. Just being used to work on the BucketlistPageComponent
   // delete when real method is created
   getBucketList(){
-    return[ {
-       name : "Fake Event 1",
-       venue: "fake venue 1",
-       venueAddress: "100 1st Street",
-       date : "today",
-       description : "An blandit imperdiet interpretaris nec. Eos iriure repudiare ex, at quot repudiandae has. Has putent quaestio inimicus no, ei eos unum aeterno. Vis error volutpat ad.",
-       link : "https://google.com",
-       isInBucket : true,
-      },
-
-      {
-        name : "Fake Event 2",
-        venue: "fake venue 2",
-        venueAddress: "200 2nd Street",
-        date : "today2",
-        description : "An blandit imperdiet interpretaris nec. Eos iriure repudiare ex, at quot repudiandae has. Has putent quaestio inimicus no, ei eos unum aeterno. Vis error volutpat ad.",
-        link : "https://google.com",
-        isInBucket : true,
-       }
-    ];
+    console.log(this.bucketListArray);
+    return this.bucketListArray;
   }
 }
