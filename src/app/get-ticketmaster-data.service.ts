@@ -13,11 +13,9 @@ export class GetTicketmasterDataService {
 
   getData(city: string, startDate : string, keyword : string) {
     if (keyword.length > 0) {
-      console.log("more than 1");
       keyword = `&keyword=${keyword}`;
     }
     else {
-      console.log('less than 1');
       keyword = '';
     }
 
