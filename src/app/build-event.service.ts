@@ -36,6 +36,7 @@ export class BuildEventService {
       this.getTicketMasterData.getData(city,startDate,keyword).subscribe((e:any) =>{
         this.eventObjects = e._embedded.events;
 
+        this.eventArray = [];
         // console.log(this.eventObjects);
 
           for (let event of this.eventObjects) {
