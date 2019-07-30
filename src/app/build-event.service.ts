@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, ɵConsole } from '@angular/core';
 import { GetTicketmasterDataService } from './get-ticketmaster-data.service';
 import { BucketlistPageComponent } from './bucketlist-page/bucketlist-page.component';
 
@@ -12,6 +12,7 @@ interface Event {
   img : string,
   isInBucket : boolean,
   eventID: string,
+  eventTime: string,
 };
 
 @Injectable({
@@ -48,6 +49,7 @@ export class BuildEventService {
               img : "",
               isInBucket : false,
               eventID : "",
+              eventTime : ""
             } ;
 
             returnedEvent.name = event.name;
@@ -58,7 +60,7 @@ export class BuildEventService {
             returnedEvent.link = event.url;
             returnedEvent.img = event.images[0].url;
             returnedEvent.eventID = event.id;
-            
+            returnedEvent.eventTime = event.dates.start.localTime;
             this.eventArray.push(returnedEvent);
           }
       });
