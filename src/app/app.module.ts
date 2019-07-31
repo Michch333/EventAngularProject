@@ -12,14 +12,16 @@ import { EventListComponent } from './event-list/event-list.component';
 import { BucketlistPageComponent } from './bucketlist-page/bucketlist-page.component';
 import { GetTicketmasterDataService } from './get-ticketmaster-data.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 
 const appRoutes: Routes = [
+  { path: 'lander', component:LandingPageComponent},
   { path: 'search-criteria', component: SearchCriteriaComponent },
   { path: 'bucketlist-page', component: BucketlistPageComponent },
   { path: 'event-list', component: EventListComponent},
   { path: '',
-    redirectTo: '/',
+    redirectTo: '/lander',
     pathMatch: 'full'
   }
 ];
@@ -31,6 +33,7 @@ const appRoutes: Routes = [
     SearchCriteriaComponent,
     EventListComponent,
     BucketlistPageComponent,
+    LandingPageComponent,
   ],
   imports: [
     BrowserModule,

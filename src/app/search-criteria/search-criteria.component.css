@@ -8,13 +8,14 @@
 .inputs {
     margin: 5px;
     padding: 10px;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.397);
     border: 5px solid;
     border-color: rgba(255, 255, 255, 3.0);
     color: white;
     text-align: center;
     width: 50%;
     font-family: 'Ubuntu', sans-serif;
+    font-size: 2em;
 }
 
 input::placeholder {
