@@ -26,5 +26,5 @@ input::placeholder {
     margin: 5px;
     padding: 10px;
     font-size: 35px;
-    cursor: default;
+    cursor: pointer;
 }

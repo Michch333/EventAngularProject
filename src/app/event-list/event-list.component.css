@@ -14,7 +14,6 @@
 
 #event-container:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    background-color: #D3D3D3;
 }
 
 #event-title {
@@ -43,10 +42,11 @@
 
 .event-description {
     flex: 1;
+    margin-left: 15px;
 }
 
 .material-icons {
-    cursor: default;
+    cursor: pointer;
     font-size: 35px;
     margin-bottom: 25px;
 }
@@ -54,6 +54,8 @@
 .bucket-icon {
     margin-right: 50px;
     color: #006CDE;
+    cursor: pointer;
+    text-align: center;
 }
 
 #eventLink {
@@ -84,4 +86,11 @@
     cursor: pointer;
     border-radius: 4px 4px 0px 0px;
     border: none;
+}
+
+#starButton {
+    text-align: center;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #006CDE;
+    color: #ffffff;
 }

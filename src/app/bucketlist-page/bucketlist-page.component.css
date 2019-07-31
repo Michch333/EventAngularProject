@@ -38,3 +38,8 @@
     width: 150px;
     object-fit: contain;
 }
+
+.material-icons {
+    cursor: pointer;
+    color: #FFFFFF;
+}
