@@ -1,0 +1,28 @@
+.lander-container{
+    position: absolute;
+    top: 3%;
+    right: 30%;
+    text-align: center;
+} 
+
+.lander-text{
+    color: white;
+    font-size: 5em;
+
+}
+
+.lander-text > span {
+    font-style: italic;
+    color: orange;
+    
+
+}
+
+.lander-btn{
+    border-radius: 20px;
+    padding: 10px;
+    background-color: white;
+    border: 2px solid orange;
+    color: navy;
+    font-weight: bold;
+}
