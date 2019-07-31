@@ -1,7 +1,7 @@
 <div id="search-criteria-container">
-        <app-search-criteria></app-search-criteria>
+    <app-search-criteria></app-search-criteria>
 </div>
-<button class="side-btn"  routerLink="/bucketlist-page" routerLinkActive="active">Bucket List</button>
+<button class="side-btn" routerLink="/bucketlist-page" routerLinkActive="active">Bucket List</button>
 <div *ngFor="let event of buildEvent.eventArray" class="event" id="event-container">
     <div class="img-box"><img src={{event.img}} id="img">
     </div>
@@ -14,7 +14,7 @@
 
     </div>
     <div class="bucket-icon">
-        <i class="material-icons" (click)="addToBucketList(event)">star_border</i><br>
+        <i class="material-icons" id="starButton" (click)="addToBucketList(event)">star</i><br>
         <a href={{event.link}} target="_blank" id="eventLink">View Details</a>
     </div>
 </div>
