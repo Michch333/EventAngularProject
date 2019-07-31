@@ -20,6 +20,7 @@ export class BucketlistPageComponent implements OnInit {
 
   eventArray : Object [] = [];
   eventObject : Event;
+  event : Event;
 
   constructor(private buildEvent : BuildEventService) { }
 
@@ -27,4 +28,13 @@ export class BucketlistPageComponent implements OnInit {
     this.eventArray = this.buildEvent.getBucketList();
   }
 
+  removeEvent(event){
+    let indexNumber = this.eventObject.indexOf(event)
+    this.eventObject.splice(indexNumber, 1);
+  }
+
+  
+
 }
+
+
