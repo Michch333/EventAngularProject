@@ -19,8 +19,8 @@ interface Event {
 export class BucketlistPageComponent implements OnInit {
 
   eventArray : Object [] = [];
-  eventObject : Event;
-  event : Event;
+  eventObject : any;
+  event : any;
 
   constructor(private buildEvent : BuildEventService) { }
 
@@ -29,8 +29,8 @@ export class BucketlistPageComponent implements OnInit {
   }
 
   removeEvent(event){
-    let indexNumber = this.eventObject.indexOf(event)
-    this.eventObject.splice(indexNumber, 1);
+    let indexNumber = this.eventArray.indexOf(event)
+    this.eventArray.splice(indexNumber, 1);
   }
 
   
