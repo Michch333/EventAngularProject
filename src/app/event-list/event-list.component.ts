@@ -20,8 +20,8 @@ export class EventListComponent implements OnInit {
   status: boolean=false;
   viewdetailsstatus: boolean = false;
 
-viewDetails(){
-    this.viewdetailsstatus = !this.viewdetailsstatus;       
+toggle(event){
+    event.hide = !event.hide;       
     }
   modifyBucket(event){
     this.buildEvent.modifyBucket(event);
