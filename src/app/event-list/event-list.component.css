@@ -114,3 +114,12 @@
     -webkit-text-stroke-color: #006CDE;
     color: #ffffff;
 }
+
+.viewdetailsfalse {
+    display: none;
+}
+
+#viewDetails {
+    text-align: center;
+    font-size: 12px;
+}
