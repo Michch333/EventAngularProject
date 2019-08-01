@@ -1,6 +1,7 @@
 import { Injectable, ɵConsole } from '@angular/core';
 import { GetTicketmasterDataService } from './get-ticketmaster-data.service';
 import { BucketlistPageComponent } from './bucketlist-page/bucketlist-page.component';
+import { unescapeIdentifier } from '@angular/compiler';
 
 interface Event {
   name: string,
@@ -83,11 +84,16 @@ export class BuildEventService {
     return this.eventArray;
   }
 
+
   addToBucket(event) {
-    console.log(event);
-    event.isInBucket = true;
-    this.bucketListArray.push(event);
-    console.log(this.bucketListArray);
+    if (event.isInBucket === false){
+      event.isInBucket = true;
+      this.bucketListArray.push(event);
+    }
+    else if (event.isInBucket === true) {
+      console.log("This event is in the bucket already");
+      return;
+    }
     return this.bucketListArray;
 
   }
