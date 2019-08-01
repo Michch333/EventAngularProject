@@ -18,8 +18,13 @@ export class EventListComponent implements OnInit {
   ngOnInit() {}
 
   status: boolean=false;
+  viewdetailsstatus: boolean = false;
 
-  addToBucketList(event){
+viewDetails(){
+    this.viewdetailsstatus = !this.viewdetailsstatus;       
+    }
+
+addToBucketList(event){
 
     this.buildEvent.addToBucket(event);
     this.status = !this.status;   
@@ -27,5 +32,4 @@ export class EventListComponent implements OnInit {
 
 
   }
-
 }

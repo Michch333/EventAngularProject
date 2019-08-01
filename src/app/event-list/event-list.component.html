@@ -8,8 +8,10 @@
     <div class="event-description">
         <a href={{event.link}} target="_blank" id="event-title">{{event.name}}</a>
         <p>{{event.venue}}</p>
-        <p id="description">{{event.description}}</p>
+
         <p>{{event.date | date: 'shortDate'}}</p>
+        <p (click)="viewDetails()" id="viewDetails">view description<br>↓</p>
+        <p id="description" [ngClass]="viewdetailsstatus ? 'viewdetailstrue' : 'viewdetailsfalse'">{{event.description}}</p>
         <!-- <p>{{event.eventTime | date: 'shortTime'}}</p> -->
 
     </div>
