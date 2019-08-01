@@ -19,9 +19,8 @@ export class EventListComponent implements OnInit {
 
   status: boolean=false;
 
-  addToBucketList(event){
-
-    this.buildEvent.addToBucket(event);
+  modifyBucket(event){
+    this.buildEvent.modifyBucket(event);
     this.status = !this.status;   
 
 
