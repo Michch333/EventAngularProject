@@ -24,9 +24,9 @@ viewDetails(){
     this.viewdetailsstatus = !this.viewdetailsstatus;       
     }
 
-addToBucketList(event){
 
-    this.buildEvent.addToBucket(event);
+  modifyBucket(event){
+    this.buildEvent.modifyBucket(event);
     this.status = !this.status;   
 
 
