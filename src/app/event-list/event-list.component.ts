@@ -14,7 +14,7 @@ export class EventListComponent implements OnInit {
   constructor( private buildEvent: BuildEventService) { 
   }
 
-
+// test
   ngOnInit() {}
 
   status: boolean=false;
