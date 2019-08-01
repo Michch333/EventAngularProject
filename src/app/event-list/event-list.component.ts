@@ -17,9 +17,14 @@ export class EventListComponent implements OnInit {
 
   ngOnInit() {}
 
+  status: boolean=false;
+
   addToBucketList(event){
 
     this.buildEvent.addToBucket(event);
+    this.status = !this.status;   
+
+
 
   }
 
