@@ -4,7 +4,7 @@
         <input #keyword type="text" placeholder="find a live experience" class="inputs" (keyup.enter)="requestEvents(city.value,date.value,keyword.value)">
         <input #city type="text" placeholder="where" class="inputs" (keyup.enter)="requestEvents(city.value,date.value,keyword.value)">
         <input #date type="date" class="inputs">
-        <i (click)="requestEvents(city.value,date.value,keyword.value)" routerLink="/event-list" class="material-icons" style="color:white">search</i>
-    </div>   
+        <i (click)="requestEvents(city.value,date.value,keyword.value)" routerLink="/event-list" class="material-icons" id="searchButton">search</i>
+    </div>
 
 </div>
