@@ -43,3 +43,7 @@
     cursor: pointer;
     color: #FFFFFF;
 }
+
+#buffer {
+    height: 100px;
+}

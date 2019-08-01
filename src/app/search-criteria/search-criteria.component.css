@@ -30,3 +30,8 @@ input::placeholder {
     font-size: 35px;
     cursor: pointer;
 }
+
+#searchButton {
+    color: white;
+    margin-top: 15px;
+}
