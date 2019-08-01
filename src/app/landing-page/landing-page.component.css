@@ -1,7 +1,9 @@
 .lander-container{
+  
     position: absolute;
-    top: 3%;
-    right: 30%;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%);
     text-align: center;
 } 
 

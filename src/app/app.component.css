@@ -17,7 +17,7 @@
     width: auto;
     background-position: 50% 50%;
     /* text-align: center; */
-    position: relative;
+    /* position: relative; */
 }
 
 #app-container:hover {
@@ -38,6 +38,10 @@
     display: flex;
     margin: 5px;
     vertical-align: top;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+   
 }
 
 #logo {
@@ -64,4 +68,8 @@ a {
     color: white;
     text-decoration: none;
     vertical-align: middle;
+}
+
+a:hover {
+    color: navy;
 }
