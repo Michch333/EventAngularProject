@@ -121,7 +121,9 @@
     display: none;
 }
 
-#viewDetails {
+#viewDetails,
+#viewDescription {
     text-align: center;
     font-size: 12px;
+    cursor: pointer;
 }

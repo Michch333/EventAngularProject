@@ -10,8 +10,8 @@
         <p>{{event.venue}}</p>
 
         <p>{{event.date | date: 'shortDate'}}</p>
-        <p (click)="viewDetails()" id="viewDetails">view description<br>↓</p>
-        <p id="description" [ngClass]="viewdetailsstatus ? 'viewdetailstrue' : 'viewdetailsfalse'">{{event.description}}</p>
+        <p (click)="toggle(event)" id="viewDescription">view description<br>↓</p>
+        <p id="description" [hidden]="event.hide">{{event.description}}</p>
         <!-- <p>{{event.eventTime | date: 'shortTime'}}</p> -->
 
     </div>

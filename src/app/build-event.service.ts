@@ -14,6 +14,7 @@ interface Event {
   isInBucket : boolean,
   eventID: string,
   eventTime: string,
+  hide: boolean;
 };
 
 @Injectable({
@@ -52,8 +53,10 @@ export class BuildEventService {
               img : "",
               isInBucket : false,
               eventID : "",
-              eventTime : ""
+              eventTime : "",
+              hide : true
             } ;
+
 
             returnedEvent.name = event.name;
             returnedEvent.venue = event._embedded.venues[0].name;
