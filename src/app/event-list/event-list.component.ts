@@ -23,8 +23,6 @@ export class EventListComponent implements OnInit {
 viewDetails(){
     this.viewdetailsstatus = !this.viewdetailsstatus;       
     }
-
-
   modifyBucket(event){
     this.buildEvent.modifyBucket(event);
     this.status = !this.status;   
