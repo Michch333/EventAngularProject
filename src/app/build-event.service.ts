@@ -85,17 +85,19 @@ export class BuildEventService {
   }
 
 
-  addToBucket(event) {
+  modifyBucket(event) {
     if (event.isInBucket === false){
       event.isInBucket = true;
       this.bucketListArray.push(event);
     }
     else if (event.isInBucket === true) {
+      event.isInBucket = false;
+      let indexNumber = this.eventArray.indexOf(event)
+      this.bucketListArray.splice(indexNumber, 1);
       console.log("This event is in the bucket already");
       return;
     }
     return this.bucketListArray;
-
   }
 
   // this is a temp method. Just being used to work on the BucketlistPageComponent
