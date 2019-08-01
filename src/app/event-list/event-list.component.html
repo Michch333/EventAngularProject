@@ -14,7 +14,7 @@
 
     </div>
     <div class="bucket-icon">
-        <i class="material-icons" id="starButton" (click)="addToBucketList(event)">star</i><br>
+        <i id="starButton" class="star1" (click)="addToBucketList(event)" [ngClass]="status ? 'success' : 'danger'">star</i><br>
         <a href={{event.link}} target="_blank" id="eventLink">View Details</a>
     </div>
 </div>
